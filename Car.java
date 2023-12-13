@@ -1,0 +1,15 @@
+public class Car extends  Vehicle{
+    public Car(){super("Car");}
+
+    @Override
+    public double computeConsumptionFactor(Road road) {
+        if (road instanceof DirtRoad) {
+            return 0.05;
+        }
+        else if(road instanceof  RockyRoad){
+            return 0.4;
+        }
+        return 0.5;
+    }
+
+}
